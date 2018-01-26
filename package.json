@@ -1,5 +1,5 @@
 {
-	"name": "p-map",
+	"name": "@jxom/p-map",
 	"version": "1.2.0",
 	"description": "Map over promises concurrently",
 	"license": "MIT",
@@ -13,11 +13,13 @@
 		"node": ">=4"
 	},
 	"scripts": {
+		"build": "babel -d lib/ index.js",
 		"test": "xo && ava"
 	},
 	"files": [
-		"index.js"
+		"lib/index.js"
 	],
+	"main": "lib/index.js",
 	"keywords": [
 		"promise",
 		"map",
@@ -38,6 +40,9 @@
 	],
 	"devDependencies": {
 		"ava": "*",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
 		"delay": "^2.0.0",
 		"in-range": "^1.0.0",
 		"random-int": "^1.0.0",
